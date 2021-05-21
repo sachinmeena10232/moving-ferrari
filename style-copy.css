@@ -1,0 +1,98 @@
+* {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.sky {
+    background: url('https://barryhopewell.files.wordpress.com/2020/09/study-in-grey.jpg?w=809') center center/cover no-repeat;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+    overflow-x: hidden;
+    /* display: none; */
+}
+
+.road {
+    background-image: url(road.jpg);
+    height: 31vh;
+    width: 500%;
+    position: absolute;
+    bottom: 0;
+    animation: road 5s linear infinite;
+    /* display: none; */
+}
+
+.city {
+    position: absolute;
+    bottom: 204px;
+    left: 0;
+    background-repeat: repeat-x;
+    background-image: url(city.png);
+    height: 45vh;
+    width: 500%;
+    animation: city 20s linear infinite;
+    right: 0;
+}
+
+#cars {
+    /* height: 215px;
+    width: 40%;
+    position: absolute;
+    bottom: 112px;
+    left: 188px; */
+    height: 164px;
+    width: 36%;
+    position: absolute;
+    bottom: 95px;
+    left: 142px;
+    animation: car 1s linear infinite;
+}
+
+.right-wheel {
+    height: 81px;
+    width: 81px;
+    position: absolute;
+    bottom: 113px;
+    left: 506px;
+    animation: wheel 5s linear infinite;
+}
+
+.left-wheel {
+    height: 81px;
+    width: 81px;
+    position: absolute;
+    bottom: 113px;
+    left: 222px;
+    animation: wheel 5s linear infinite;
+}
+
+@keyframes city {
+    100% {
+        transform: translateX(-3400px);
+    }
+}
+
+@keyframes car {
+    0% {
+        bottom: 112px;
+    }
+    50% {
+        bottom: 115px;
+    }
+    100% {
+        bottom: 112px;
+    }
+}
+
+@keyframes road {
+    100% {
+        transform: translateX(-3000px);
+    }
+}
+
+@keyframes wheel {
+    100% {
+        transform: rotate(360deg);
+    }
+}
